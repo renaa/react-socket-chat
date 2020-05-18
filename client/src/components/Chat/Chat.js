@@ -40,13 +40,15 @@ const Chat = ({ location }) => {
     })
   }, [messages])
 
+  // recieive
   console.log(message, messages)
   return (
     <div className="outerContainer">
       <div className="innerContainer">
         <input value={message} preventdefault="true"
-          onChange={(event) => setMessage(event.target.value)}
-          onKeyPress={event => event.key === 'Enter' ?  sendMessage() : null} />
+          onChange={  event => setMessage(event.target.value)}
+          onKeyPress={event => event.key === 'Enter' ?  sendMessage() : console.log(event.key)
+        } />
       </div>
     </div>
   )
