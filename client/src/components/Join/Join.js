@@ -11,9 +11,16 @@ const Join = () => {
         <div className="joinOuterContainer">
             <div className="joinInnerContainer">
                 <h1>Join</h1>
-                <div><input placeholder="Name" className="joinInput"       type="text" onChange={(e) => setName(e.target.value)} /></div>
-                <div><input placeholder="Room" className="joinInput mt-20" type="text" onChange={(e) => setRoom(e.target.value)} /></div>
-                <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
+                <div><input placeholder="Name"
+                    className="joinInput"
+                    type="text"
+                    onChange={(e) => setName(e.target.value)} /></div>
+                <div><input placeholder="Room"
+                    className="joinInput mt-20"
+                    type="text"
+                    onChange={(e) => setRoom(e.target.value)} /></div>
+                <Link onClick={e => (!name || !room) ? e.preventDefault() : null}
+                    to={`/chat?name=${name}&room=${room}`}>
                     <button className="button mt-20" type="submit">Sign inn</button></Link>
             </div>
 
