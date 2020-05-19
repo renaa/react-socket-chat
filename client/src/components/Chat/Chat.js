@@ -16,8 +16,8 @@ const Chat = ({ location }) => {
   const [message, setMessage] = useState('')
   const [messages, setMessages] = useState([])
   const ENDPOINT = 'localhost:5000'
+  // const ENDPOINT = 'https://react-socketio-chat.herokuapp.com/'
 
-  
   //connect
   useEffect(() => {
     const { room, name } = queryString.parse(location.search)
@@ -48,7 +48,7 @@ const Chat = ({ location }) => {
   }
   
   
-  console.log(message, messages)
+  // console.log(message, messages)
   return (
     <div className="outerContainer">
       <div className="container">
